@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>德州开发笔记 | FXXX</title>
+  <meta name="description" content="1.getClass()方法使用作用：获取运行时对象所属类的详细信息。 getClass() 方法是 Java 中的 Object 类的一部分，每个 Java 对象都继承自 Object 类。因此，所有 Java 对象都可以使用 getClass() 方法。这个方法的作用是返回对象的运行时类对象 (Class 对象)，用于获取对象所属类的详细信息。 getClass() 方法返回一个 Class&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="德州开发笔记">
+<meta property="og:url" content="http://example.com/2024/05/26/%E5%BE%B7%E5%B7%9E%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="WTF">
+<meta property="og:description" content="1.getClass()方法使用作用：获取运行时对象所属类的详细信息。 getClass() 方法是 Java 中的 Object 类的一部分，每个 Java 对象都继承自 Object 类。因此，所有 Java 对象都可以使用 getClass() 方法。这个方法的作用是返回对象的运行时类对象 (Class 对象)，用于获取对象所属类的详细信息。 getClass() 方法返回一个 Class&amp;">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-05-26T14:12:29.000Z">
+<meta property="article:modified_time" content="2024-05-26T15:40:16.504Z">
+<meta property="article:author" content="玄">
+<meta name="twitter:card" content="summary">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://example.com/2024/05/26/%E5%BE%B7%E5%B7%9E%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="WTF" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+  
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+
+<body class="main-center theme-black" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://github.com/" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">烟火</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">Software Developer</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> Shanghai,China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="Search" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="Type something..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav ">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">Home</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">Archives</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">Categories</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">Tags</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-repository">
+          <a href="/repository">
+            
+            <i class="icon icon-project"></i>
+            
+            <span class="menu-title">Repository</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">About</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/cofess" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">Board</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>欢迎交流</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+
+    
+      
+
+    
+      
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Archive</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/05/">May 2024</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/07/">July 2023</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2024/05/26/%E5%BE%B7%E5%B7%9E%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/" class="title">德州开发笔记</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2024-05-26T14:12:29.000Z" itemprop="datePublished">2024-05-26</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2023/07/16/hello-world/" class="title">Hello World</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-07-15T17:39:46.081Z" itemprop="datePublished">2023-07-16</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=2086092520&auto=0&height=66"></iframe>
+  </div>
+
+
+
+</aside>
+
+  
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-德州开发笔记" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      德州开发笔记
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2024/05/26/%E5%BE%B7%E5%B7%9E%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/" class="article-date">
+	  <time datetime="2024-05-26T14:12:29.000Z" itemprop="datePublished">2024-05-26</time>
+	</a>
+</span>
+        
+        
+
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2024/05/26/%E5%BE%B7%E5%B7%9E%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/#comments" class="article-comment-link">Comments</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h4 id="1-getClass-方法使用"><a href="#1-getClass-方法使用" class="headerlink" title="1.getClass()方法使用"></a>1.getClass()方法使用</h4><p>作用：<strong>获取运行时对象所属类的详细信息。</strong></p>
+<p><code>getClass()</code> 方法是 Java 中的 <code>Object</code> 类的一部分，每个 Java 对象都继承自 <code>Object</code> 类。因此，所有 Java 对象都可以使用 <code>getClass()</code> 方法。这个方法的作用是返回对象的运行时类对象 (<code>Class</code> 对象)，用于获取对象所属类的详细信息。</p>
+<p><code>getClass()</code> 方法返回一个 <code>Class&lt;?&gt;</code> 类型的对象，</p>
+<ol>
+<li><p><strong>反射操作：</strong> 反射是 Java 提供的一种功能，允许在运行时获取类的信息并操作对象。例如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Class&lt;?&gt; clazz = object.getClass();</span><br><span class="line"><span class="type">Method</span> <span class="variable">method</span> <span class="operator">=</span> clazz.getMethod(<span class="string">&quot;methodName&quot;</span>);</span><br><span class="line">method.invoke(object);</span><br></pre></td></tr></table></figure>
+
+<p>通过 <code>getClass()</code> 获取的 <code>Class</code> 对象，可以进一步获取类的方法、字段、构造函数等信息，并对其进行操作。</p>
+</li>
+<li><p><strong>类型检查和转换：</strong> <code>getClass()</code> 方法可以用于类型检查，以确保对象属于特定的类。例如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (object.getClass() == SomeClass.class) &#123;</span><br><span class="line">    <span class="comment">// 类型匹配</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h4 id="2-如何重写hashcode方法"><a href="#2-如何重写hashcode方法" class="headerlink" title="2.如何重写hashcode方法"></a>2.如何重写hashcode方法</h4><p>重写 <code>hashCode</code> 方法的步骤</p>
+<ol>
+<li><strong>选择属性：</strong> 选择那些参与 <code>equals</code> 方法比较的属性来计算哈希码。</li>
+<li><strong>计算哈希码：</strong> 使用一个合适的算法来计算哈希码。常见的方法是将这些属性的哈希码组合起来。</li>
+</ol>
+<p>作用:</p>
+<p>在判断对象是否相等时，首先计算hashcode是否一样，一样再计算对象的属性值内容是否一致</p>
+<p>如果hashcode不一样，则对象一定不一样</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Objects;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Person</span> &#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> id;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> age;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Person</span><span class="params">(<span class="type">int</span> id, String name, <span class="type">int</span> age)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.id = id;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">        <span class="built_in">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">equals</span><span class="params">(Object o)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">this</span> == o) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">if</span> (o == <span class="literal">null</span> || getClass() != o.getClass()) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="type">Person</span> <span class="variable">person</span> <span class="operator">=</span> (Person) o;</span><br><span class="line">        <span class="keyword">return</span> id == person.id &amp;&amp;</span><br><span class="line">               age == person.age &amp;&amp;</span><br><span class="line">               Objects.equals(name, person.name);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">hashCode</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> Objects.hash(id, name, age);<span class="comment">//使用工具类计算hash</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">Person</span> <span class="variable">p1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Person</span>(<span class="number">1</span>, <span class="string">&quot;Alice&quot;</span>, <span class="number">30</span>);</span><br><span class="line">        <span class="type">Person</span> <span class="variable">p2</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Person</span>(<span class="number">1</span>, <span class="string">&quot;Alice&quot;</span>, <span class="number">30</span>);</span><br><span class="line">        <span class="type">Person</span> <span class="variable">p3</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Person</span>(<span class="number">2</span>, <span class="string">&quot;Bob&quot;</span>, <span class="number">25</span>);</span><br><span class="line"></span><br><span class="line">        System.out.println(p1.hashCode());  <span class="comment">// same as p2</span></span><br><span class="line">        System.out.println(p2.hashCode());  <span class="comment">// same as p1</span></span><br><span class="line">        System.out.println(p3.hashCode());  <span class="comment">// different from p1 and p2</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>手动计算哈希值</strong></p>
+<p>使用31 * n + value的方式计算哈希值，其中n是一个非零常数。这种方式可以提供良好的分布性能，尤其是对于字符串、数组和集合这样的数据结构。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> <span class="type">int</span> <span class="title function_">hashCode</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">result</span> <span class="operator">=</span> <span class="number">17</span>;  <span class="comment">// 一个任意的非零常数</span></span><br><span class="line">    result = <span class="number">31</span> * result + id;</span><br><span class="line">    result = <span class="number">31</span> * result + (name != <span class="literal">null</span> ? name.hashCode() : <span class="number">0</span>);</span><br><span class="line">    result = <span class="number">31</span> * result + age;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">test</span><span class="params">()</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span><span class="number">1</span>;</span><br><span class="line">    <span class="type">int</span> <span class="variable">b</span> <span class="operator">=</span><span class="number">3</span>;</span><br><span class="line">    <span class="type">int</span> <span class="variable">c</span> <span class="operator">=</span><span class="number">3</span>;</span><br><span class="line">    System.out.println(Objects.hash(a)); <span class="comment">//输出32</span></span><br><span class="line">    System.out.println(Objects.hash(b)); <span class="comment">//34</span></span><br><span class="line">     System.out.println(Objects.hash(c)); <span class="comment">//34</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-Collections-sort用法"><a href="#3-Collections-sort用法" class="headerlink" title="3. Collections.sort用法"></a>3. Collections.sort用法</h4><p><code>Collections.sort</code> 是 Java 中用于对列表进行排序的一个静态方法。它提供了简单、方便的方式来对列表中的元素进行<strong>自然顺序排序或者根据指定的比较器进行排序。</strong></p>
+<p>自然顺序排序是基于元素的自然顺序进行的排序，要求列表中的元素实现 <code>Comparable</code> 接口，并重写 <code>compareTo</code> 方法。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">List&lt;Integer&gt; numbers = Arrays.asList(<span class="number">5</span>, <span class="number">2</span>, <span class="number">9</span>, <span class="number">1</span>, <span class="number">3</span>);</span><br><span class="line">    Collections.sort(numbers);</span><br><span class="line">    System.out.println(numbers);  <span class="comment">// 输出: [1, 2, 3, 5, 9]</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><code>Integer</code> 和 <code>String</code> 类都实现了 <code>Comparable</code> 接口，所以可以直接使用 <code>Collections.sort</code> 进行排序。</p>
+<h4 id="4-list-sort-Comparator-reverseOrder"><a href="#4-list-sort-Comparator-reverseOrder" class="headerlink" title="4. list.sort(Comparator.reverseOrder())"></a>4. list.sort(Comparator.reverseOrder())</h4><p>对集合降序排序</p>
+<p><code>Comparator.reverseOrder</code> 是 <code>Comparator</code> 接口的一个静态方法，返回一个降序比较器，该比较器是自然顺序的逆序。换句话说，它对元素进行降序排序。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">List&lt;Integer&gt; numbers = Arrays.asList(5, 2, 9, 1, 3);</span><br><span class="line">      numbers.sort(Comparator.reverseOrder());</span><br><span class="line">      System.out.println(numbers);  // 输出: [9, 5, 3, 2, 1]</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-list-subList方法"><a href="#5-list-subList方法" class="headerlink" title="5.list.subList方法"></a>5.list.subList方法</h4><p>从一个 <code>List</code> 中获取其子列表（sublist）。该方法返回的子列表是原列表的视图（view），这意味着对子列表的修改会直接影响原列表，反之亦然。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">List&lt;E&gt; subList(int fromIndex, int toIndex)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>fromIndex</code>：子列表的起始位置（包含）。</li>
+<li><code>toIndex</code>：子列表的结束位置（不包含）</li>
+</ul>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://example.com/2024/05/26/%E5%BE%B7%E5%B7%9E%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/" title="德州开发笔记" target="_blank" rel="external">http://example.com/2024/05/26/德州开发笔记/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/" target="_blank"><span class="text-dark">烟火</span><small class="ml-1x">Software Developer</small></a></h3>
+        <div>还没想好</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    
+    <li class="next">
+      <a href="/2023/07/16/hello-world/" title="Hello World"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>$</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>Maybe you could buy me a cup of coffee.</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="/images/donate/alipayimg.png" alt="Scan Qrcode" title="Scan" />
+              </div>
+              <p class="text-muted mv">Scan this qrcode</p>
+              <p class="text-grey">Open alipay app scan this qrcode, buy me a coffee!</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="/images/donate/wechatpayimg.png" alt="Scan Qrcode" title="Scan" />
+              </div>
+              <p class="text-muted mv">Scan this qrcode</p>
+              <p class="text-grey">Open wechat app scan this qrcode, buy me a coffee!</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> alipay</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> wechat payment</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/cofess" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+   
+
+
+
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: '',
+    appKey: '',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+  </script>
+
+     
+
+
+
+
+
+
+
+</body>
+</html>
