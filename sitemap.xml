@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://example.com/2024/10/10/lookup%E6%B3%A8%E8%A7%A3/</loc>
+    
+    <lastmod>2024-10-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2024/10/06/spring%E4%B8%ADbean%E7%9A%84%E8%8C%83%E5%9B%B4%E4%B8%BAprototype%E5%A4%9A%E4%BE%8B%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/</loc>
+    
+    <lastmod>2024-10-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/2024/06/08/vuex%E7%9A%84%E4%BD%BF%E7%94%A8/</loc>
     
     <lastmod>2024-10-13</lastmod>
@@ -29,25 +47,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2024/10/01/test1/</loc>
-    
-    <lastmod>2024-10-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/2024/10/08/volatile%E5%85%B3%E9%94%AE%E5%AD%97/</loc>
-    
-    <lastmod>2024-10-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/2024/10/08/test3/</loc>
     
     <lastmod>2024-10-08</lastmod>
     
@@ -59,15 +59,6 @@
     <loc>http://example.com/2024/06/01/%E5%A0%86%E7%AE%97%E6%B3%95-Heap-algorithm/</loc>
     
     <lastmod>2024-06-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/2023/07/16/hello-world/</loc>
-    
-    <lastmod>2024-05-26</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -94,7 +85,7 @@
 
   <url>
     <loc>http://example.com/</loc>
-    <lastmod>2024-10-13</lastmod>
+    <lastmod>2024-10-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
